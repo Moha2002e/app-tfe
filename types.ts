@@ -1,6 +1,10 @@
 
 export type Priority = 'basse' | 'moyenne' | 'haute';
 
+export interface User {
+  email: string;
+}
+
 export interface Task {
   id: string;
   title: string;
