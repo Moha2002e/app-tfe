@@ -1,9 +1,7 @@
-
 import { GoogleGenAI, Type } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
-
 export const getAICoachingResponse = async (userMessage: string, context: string) => {
+  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
   const response = await ai.models.generateContent({
     model: 'gemini-3-flash-preview',
     contents: `Tu es un coach académique et bien-être expert. 
@@ -15,6 +13,7 @@ export const getAICoachingResponse = async (userMessage: string, context: string
 };
 
 export const summarizeNotes = async (notes: string) => {
+  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
   const response = await ai.models.generateContent({
     model: 'gemini-3-flash-preview',
     contents: `Résume les notes suivantes sous forme de points clés clairs et structurés pour un étudiant:
@@ -26,6 +25,7 @@ export const summarizeNotes = async (notes: string) => {
 };
 
 export const generateQuiz = async (content: string) => {
+  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
   const response = await ai.models.generateContent({
     model: 'gemini-3-flash-preview',
     contents: `Génère un quiz de 3 questions basées sur ce contenu. Retourne un JSON uniquement.`,
