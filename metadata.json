@@ -1,5 +1,5 @@
 {
-  "name": "Copy of ZenStudent - Gestion Étudiante 360°",
+  "name": "ZenStudent Production",
   "description": "Une plateforme complète pour étudiants permettant de gérer le planning, le stress, le TFE et les cours avec un assistant IA intégré.",
   "requestFramePermissions": [
     "microphone"
